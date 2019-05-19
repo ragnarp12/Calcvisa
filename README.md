@@ -1,27 +1,19 @@
 # Calcvisa
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
+Calculate *SUM* and *MULTIPLY* on user input.
+To calculate both methods the decision was made to use **reduce()**. That one will call a function that
+returns a result from the methods. This will make the 
+calculator in theory dynamic since user can add more
+methods to methods list and add new calculation function.
+
+View file `src/app/component/result/result.component.ts` and take a look at `method` property on line 30. By adding more values to the array property user can make for example a division or withdraw on user input. Only needed is a function similar to those called `sum` and `multiply`.
+
+I have commented out one method to test.
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

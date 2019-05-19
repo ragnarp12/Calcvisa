@@ -13,12 +13,13 @@ import { Item } from 'src/app/models/item.model';
 @Component({
   selector: 'result',
   templateUrl: './result.component.html',
-  styleUrls: ['./result.component.less']
+  styleUrls: ['./result.component.less'],
+  host: {
+    '[class.box]': 'true',
+    '[class.color-red]': 'true'
+  }
 })
 export class ResultComponent implements OnInit {
-  @HostBinding('class.box') classBox = true;
-  @HostBinding('class.color-red') classColor = true;
-
   // user input items list
   @Input() public items: Item[];
 
@@ -29,14 +30,16 @@ export class ResultComponent implements OnInit {
   public methods: Method[] = [
     {
       id: 'sum',
-      text: 'Sum',
-      initialValue: 0
+      text: 'Sum'
     },
     {
       id: 'multiply',
-      text: 'Multiply',
-      initialValue: 1
-    }
+      text: 'Multiply'
+    },
+    // {
+    //   id: 'division',
+    //   text: 'Divide'
+    // }
   ];
 
   /**
@@ -82,6 +85,8 @@ export class ResultComponent implements OnInit {
     return this[methodName](total, value);
   }
 
+  // Here should the calculation methods be
+
   private sum(x: number, y: number): number {
     return x + y;
   }
@@ -89,4 +94,8 @@ export class ResultComponent implements OnInit {
   private multiply(x: number, y: number): number {
     return x * y;
   }
+
+  // private division(x: number, y: number): number {
+  //   return x / y;
+  // }
 }
