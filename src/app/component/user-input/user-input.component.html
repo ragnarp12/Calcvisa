@@ -1,12 +1,11 @@
 <div class="container">
-  <div class="text">Value {{ item.id + 1 }}:</div>
-  <div class="input-value">
+  <label class="label" for="input-{{ item.id }}">Value {{ item.id + 1 }}:</label>
     <input
+      class="user-input"
       #userInput
       type="text"
       name="input-{{ item.id }}"
       id="input-{{ item.id }}"
       [(ngModel)]="item.value"
     />
-  </div>
 </div>
