@@ -10,6 +10,10 @@ View file `src/app/component/result/result.component.ts` and take a look at `met
 
 I have commented out one method to test.
 
+## Install packages
+
+Run `npm install` to install all needed packages.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
