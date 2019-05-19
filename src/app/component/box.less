@@ -1,0 +1,22 @@
+@box-item: 15rem;
+@primary-color: #79d0ff;
+@secondary-color: #ffc0cb;
+@border-color: #000;
+
+.box {
+  min-width: @box-item;
+  min-height: @box-item;
+  display: flex;
+  align-items: center;
+  border: 1px solid @border-color;
+  border-radius: 2px;
+  margin: 1.5rem;
+}
+
+.color-blue {
+  background-color: @primary-color;
+}
+
+.color-red {
+  background-color: @secondary-color;
+}

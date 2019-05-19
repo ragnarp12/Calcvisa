@@ -1,0 +1,19 @@
+@import './component/box.less';
+
+:host {
+  display: flex;
+  flex: 0 1 auto;
+  justify-content: center;
+  min-height: 100vh; // Set minimum height as 100 % of view height
+  align-items: center;
+
+  .container {
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 1.6rem;
+    justify-content: space-around;
+    width: 1000px;
+  }
+}

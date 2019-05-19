@@ -1,0 +1,26 @@
+@import './../box.less';
+
+@inputPadding: 0.5rem;
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  .text {
+    margin-right: 1rem;
+  }
+
+  .input-value {
+    display: inline-block;
+    width: 3.6rem;
+
+    input {
+      width: 100%;
+      padding-left: @inputPadding;
+      padding-right: @inputPadding;
+
+    }
+  }
+}

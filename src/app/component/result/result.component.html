@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="radio-list">
+    <div class="radio-item" *ngFor="let method of methods">
+      <input
+        type="radio"
+        [(ngModel)]="selectedMethod"
+        id="{{ method.id }}"
+        [value]="method"
+      />
+
+      <label for="{{ method.id }}">{{ method.text }}</label>
+    </div>
+  </div>
+  {{ radioSelected | json }}
+  <div class="result-text">Result: {{ result }}</div>
+</div>
