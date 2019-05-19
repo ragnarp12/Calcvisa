@@ -29,13 +29,14 @@ export class ResultComponent implements OnInit {
   public methods: Method[] = [
     {
       id: 'sum',
-      text: 'Sum'
+      text: 'Sum',
+      initialValue: 0
     },
     {
       id: 'multiply',
-      text: 'Multiply'
-    },
-    { id: 'fibonacci', text: 'Fibi' }
+      text: 'Multiply',
+      initialValue: 1
+    }
   ];
 
   /**
@@ -45,14 +46,17 @@ export class ResultComponent implements OnInit {
    * results are instantly calculated.
    */
   public get result(): number {
+    let totalValue: number = 0;
     // Extract all values to simple array.
     const itemsValue: number[] = this.items.map(item =>
       parseInt(item.value, 10)
     );
 
-    const totalValue: number = itemsValue.reduce((total, itemValue) => {
-      return this.callFunction(this.selectedMethod.id, total, itemValue);
-    });
+    if (itemsValue.length > 0) {
+      totalValue = itemsValue.reduce((total, itemValue) => {
+        return this.callFunction(this.selectedMethod.id, total, itemValue);
+      });
+    }
 
     return totalValue;
   }

@@ -1,7 +1,6 @@
 import {
   Component,
   Input,
-  HostBinding,
   ElementRef,
   ViewChild,
   AfterViewInit,
@@ -9,7 +8,7 @@ import {
   OnInit
 } from '@angular/core';
 import { Item } from 'src/app/models/item.model';
-import { fromEvent, Observable } from 'rxjs';
+import { fromEvent } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
 
 @Component({
@@ -60,6 +59,8 @@ export class UserInputComponent implements OnInit, AfterViewInit, OnDestroy {
       return;
     } else {
       e.preventDefault();
+      // if user input is not valid then
+      // rewrite it with previous value
       this.item.value = this.previousValue;
     }
   }
